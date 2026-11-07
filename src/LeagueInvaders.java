@@ -5,18 +5,12 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class LeagueInvaders {
-	public class GamePanel extends JPanel implements ActionListener
-	{
+	
 		
 
-		@Override
-		public void actionPerformed(ActionEvent arg0) {
-			
-			// TODO Auto-generated method stub
-			
+		
 
-
-		} }
+		
 		JFrame frame;
 		GamePanel panel;
 	public static final int WIDTH = 500;
@@ -25,6 +19,7 @@ public class LeagueInvaders {
 	public LeagueInvaders() {
 		frame = new JFrame();
 		panel = new GamePanel();
+		frame.addKeyListener(panel);
 	}
 	void setup() {
 		frame.add(panel);
